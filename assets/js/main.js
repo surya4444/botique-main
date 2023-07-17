@@ -76,12 +76,14 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#bg-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
-        slideSpeed: 100,
-        autoPlay: 5000,
-        paginationSpeed: 100,
+        // slideSpeed: 0,
+        items: 1,
+        // autoPlay: 5000,
+        // paginationSpeed: 100,
         singleItem: true,
         mouseDrag: false,
         transitionStyle: "fade"
+        
                 // "singleItem:true" is a shortcut for:
                 // items : 1, 
                 // itemsDesktop : false,
@@ -96,6 +98,27 @@ $(document).ready(function () {
         paginationSpeed: 100,
         items: 3
 
+    });
+    $('.properties-slider').owlCarousel({
+        autoplay: true,
+        loop: true,
+        items:3,
+        margin: 30,
+        stagePadding: 0,
+        nav: true,
+        dots: true,
+        navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+        responsive:{
+            0:{
+                items: 1
+            },
+            600:{
+                items: 2
+            },
+            1000:{
+                items: 3
+            }
+        }
     });
     $("#testimonial-slider").owlCarousel({
         navigation: false, // Show next and prev buttons
